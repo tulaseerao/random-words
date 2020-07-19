@@ -30,7 +30,7 @@ Random Word Picker from .txt file
   - Visit http://localhost:3000
 
 ### Testing
-   - `rails db:setup`
+   - `RAILS_ENV=test rails db:create && rails db:migrate`
    - `bundle exec rspec`
 
 ### Code Quality (Local)
