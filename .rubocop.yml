@@ -1,0 +1,92 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'bin/*'
+    - 'out/**/*'
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: false
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: false
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: false
+Lint/DuplicateElsifCondition:
+  Enabled: false
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Style/AccessorGrouping:
+  Enabled: false
+Style/ArrayCoercion:
+  Enabled: false
+Style/BisectedAttrAccessor:
+  Enabled: false
+Style/CaseLikeIf:
+  Enabled: false
+Style/HashAsLastArrayItem:
+  Enabled: false
+Style/HashLikeCase:
+  Enabled: false
+Style/RedundantAssignment:
+  Enabled: false
+Style/RedundantFetchBlock:
+  Enabled: false
+Style/RedundantRegexpEscape:
+  Enabled: false
+Style/SlicingWithRange:
+  Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Style/RedundantFileExtensionInRequire:
+  Enabled: false
+Style/RedundantRegexpCharacterClass:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+Metrics/ClassLength:
+  Exclude: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+
+Metrics/AbcSize:
+  Exclude: false
+
+Metrics/CyclomaticComplexity:
+  Exclude: false
+
+Naming/MemoizedInstanceVariableName:
+  Exclude: false
+
+Metrics/PerceivedComplexity:
+  Exclude: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+  
+Style/ExponentialNotation:
+  Enabled: false
+
+Layout/FirstArgumentIndentation:
+  Exclude:
+     - 'lib/tasks/**/*'

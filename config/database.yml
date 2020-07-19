@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
+  url: <%= ENV.fetch('DATABASE_URL') %>
+  <% if ENV['DATABASE_USERNAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  <% end %>
+  <% if ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  <% end %>
+
+development:
+  <<: *default
+  database: <%= ENV['DATABASE'] || 'random_words_dev' %>
+
+test:
+  <<: *default
+  database: <%= ENV['DATABASE_TEST'] || 'random_words_test' %>
+
+production:
+  <<: *default
