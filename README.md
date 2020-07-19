@@ -25,7 +25,9 @@ Random Word Picker from .txt file
    -  `bundle install`
    -  `rails db:setup`
    -  `bundle exec rails s`
-  Visit http://localhost:3000
+
+### 
+  - Visit http://localhost:3000
 
 ### Testing
    - `rails db:setup`
